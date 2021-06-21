@@ -1,54 +1,42 @@
 class DemoBlazeHome
 {
 
-    getPhonesTab()
-    {
+    getPhonesTab() {
       return  cy.get('.list-group-item').contains('Phones')
     }
     
-    getSamsungGalaxyS6()
-    {
+    getSamsungGalaxyS6() {
       return  cy.get('.hrefch').contains('Samsung galaxy s6')
     }
 
-    getMonitorTab()
-    {
+    getMonitorTab() {
       return  cy.get('.list-group-item').contains('Monitors')
     }
 
-    getAppleMonitor()
-    {
-      cy.wait(1000)
-      return  cy.get('.hrefch').contains('Apple monitor 24')
+    getAppleMonitor() {
+        return  cy.get('.hrefch').contains('Apple monitor 24')
     }
 
-    getLaptopsTab()
-    {
+    getLaptopsTab() {
       return  cy.get('.list-group-item').contains('Laptops')
     }
 
-    getSonyVaio()
-    {
+    getSonyVaio() {
       return  cy.contains('Sony vaio i5')
     }
-    getDell()
-    {
+    getDell() {
      return cy.contains('Dell i7 8gb')
     }
-    getAddToCart()
-    {
+    getAddToCart() {
      return cy.get('.btn.btn-success.btn-lg').contains('Add to cart')
     }
-    getHome()
-    {
+    getHome() {
      return cy.get('.nav-link').contains('Home')
     }
-    productName()
-    {
+    productName() {
      return cy.get('.name')
     }
-    productPrice()
-    {
+    productPrice() {
      return cy.get('.price-container')
     }
 
