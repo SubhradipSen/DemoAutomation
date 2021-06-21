@@ -1,0 +1,17 @@
+
+{
+  "defaultCommandTimeout": 10000,
+
+  "requestTimeout":20000,
+  
+   "projectId": "bbao7n",
+
+  "testFiles": "**/*",
+
+  "env":
+  {
+    "DemoBlazeUrl" : "https://demoblaze.com/"
+
+  }
+}
+

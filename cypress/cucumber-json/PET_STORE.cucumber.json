@@ -1,0 +1,135 @@
+[
+  {
+    "description": "    User wants to see all the available pets in  store, add a new pet to the store, update status of the \n    newly added pet and subsequently delete the pet from store.",
+    "keyword": "Feature",
+    "name": "Pet Store Activities",
+    "line": 1,
+    "id": "pet-store-activities",
+    "tags": [],
+    "uri": "pet_store.feature",
+    "elements": [
+      {
+        "id": "pet-store-activities;get-pet-information-by-status",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Get Pet Information by status",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "User Makes GET API Call when Status is Available",
+            "result": {
+              "status": "passed",
+              "duration": 2424000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "The Call Returns All Pets with Status Available",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "pet-store-activities;user-adds-a-new-pet-to-the-pet-store",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User Adds a New Pet to the Pet Store",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "User Invokes a POST API Call to Add New Pet to the Store",
+            "result": {
+              "status": "passed",
+              "duration": 265000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Pet Information Gets Added to the Store Successfully",
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "pet-store-activities;update-status-of-a-pet",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Update Status of a Pet",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "User Invokes a PUT API Call to Update Pet Status",
+            "result": {
+              "status": "passed",
+              "duration": 128000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Pet Status Gets Updated Successfully",
+            "result": {
+              "status": "failed",
+              "duration": 117000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -'available'\n    +'sold'\n\n    at Context.eval (http://localhost:51487/__cypress/tests?p=cypress\\integration\\examples\\bdd_test\\pet_store.feature:133:40)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pet-store-activities;delete-the-newly-added-pet-from-pet-store",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Delete the Newly Added Pet from Pet Store",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "User Invokes a DELETE API Call to Delete the Newly Added Pet",
+            "result": {
+              "status": "passed",
+              "duration": 170000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Corresponding Pet Information Gets Deleted Successfully",
+            "result": {
+              "status": "failed",
+              "duration": 124000000,
+              "error_message": "AssertionError: expected undefined to equal 'Pet not found'\n    at Context.eval (http://localhost:51487/__cypress/tests?p=cypress\\integration\\examples\\bdd_test\\pet_store.feature:152:41)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

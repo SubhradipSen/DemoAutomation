@@ -1,0 +1,113 @@
+[
+  {
+    "description": "    User wants to purchase a Sony Vaio Laptop",
+    "keyword": "Feature",
+    "name": "Process Flow to Buy a Laptop",
+    "line": 1,
+    "id": "process-flow-to-buy-a-laptop",
+    "tags": [],
+    "uri": "demo_online.feature",
+    "elements": [
+      {
+        "id": "process-flow-to-buy-a-laptop;user-selects-laptops-to-buy",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "User Selects Laptops to Buy",
+        "tags": [
+          {
+            "name": "@selecLaptops",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "User Opens Demoblaze website",
+            "result": {
+              "status": "passed",
+              "duration": 2138000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "User Navigates through Product Categories Phone, Laptops and Monitors",
+            "result": {
+              "status": "passed",
+              "duration": 2386000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User Selects Laptops to Buy",
+            "result": {
+              "status": "passed",
+              "duration": 4623000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "The selected Laptops are displayed on Shopping Cart",
+            "result": {
+              "status": "failed",
+              "duration": 1019000000,
+              "error_message": "AssertionError: expected 'Dell i7 8gb700Delete' to include 'Sony vaio i5'\n    at Context.eval (https://demoblaze.com/__cypress/tests?p=cypress\\integration\\examples\\bdd_test\\demo_online.feature:207:21)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "process-flow-to-buy-a-laptop;user-removes-one-selected-laptop-and-buys-the-remaining-one",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "User Removes One Selected Laptop and Buys The Remaining One",
+        "tags": [
+          {
+            "name": "@buyLaptop",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "User Removes One Item From Cart",
+            "result": {
+              "status": "failed",
+              "duration": 291000000,
+              "error_message": "AssertionError: expected 'Dell i7 8gb700DeleteSony vaio i5790Delete' to not include 'Dell i7 8gb'\n    at Context.eval (https://demoblaze.com/__cypress/tests?p=cypress\\integration\\examples\\bdd_test\\demo_online.feature:220:22)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "User Places an Order for The Remaining Item After Filling Out The Web Form",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Corresponding Order Placement will be Successful",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
